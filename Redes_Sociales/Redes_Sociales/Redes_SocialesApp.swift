@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
+@MainActor
 struct Redes_SocialesApp: App {
+    @State var controlador = ControladorAplicacion()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PublicacionesGeneral()
+                .environment(controlador)
         }
     }
 }

@@ -8,30 +8,38 @@
 import SwiftUI
 
 struct PublicacionesGeneral: View {
-    @StateObject var controlador = ControladorPublicaciones()
+    @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        ScrollView{
+        NavigationStack{
+         ScrollView{
             VStack{
                 ForEach(controlador.publicaciones){ publicacion in
-                    Text("\(publicacion.id)")
-                    VStack{
-                        Text("\(publicacion.title)")
-                        Text("\(publicacion.body)")
+                    NavigationLink{
+                        Text("hola mundo")
+                    } label : {
+                        HStack{
+                            Text("\(publicacion.id)")
+                            VStack{
+                                Text("\(publicacion.title)")
+                                Text("\(publicacion.body)")
+                            }
+                        }.onTapGesture {
+                            //controlador.mostrar_publicacion(publicacion.id)
+                            print("usted selecciono \(publicacion.id)")
+                        }
                     }
                 }
             }
         }
-        .onAppear{
-            if controlador.publicaciones.isEmpty{
-                Task{
-                    await controlador.obtener_publicaciones()
-                }
-            }
-        }
-    }
-} 
+//        .onAppear{
+//            print("Hola mundo")
+//        }
+     }
+   }
+}
 
 #Preview {
     PublicacionesGeneral()
+        .environment(ControladorAplicacion())
 }
