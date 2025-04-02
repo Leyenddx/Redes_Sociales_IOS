@@ -13,6 +13,8 @@ struct PublicacionesGeneral: View {
     //colores
     let acent = Color(red: 0.67041, green: 0.78467, blue: 0.97889)
     let onAccent = Color(red: 0.06025, green: 0.16915, blue: 0.36485)
+    let accentContainer = Color(red: 0.10561, green: 0.25683, blue: 0.52989)
+    let onAcentContainer = Color(red: 0.83587, green: 0.89299, blue: 0.98864)
     
     var body: some View {
         NavigationStack{
@@ -26,16 +28,18 @@ struct PublicacionesGeneral: View {
                     } label : {
                             VStack{
                                 Divider()
-                                Text("Publicacion \(publicacion.id)").foregroundColor(onAccent)
+                                Text("Publicacion \(publicacion.id)").foregroundColor(onAcentContainer)
                                
                                 VStack{
                                     Text("Tema: \(publicacion.title)")
-                                        .foregroundColor(onAccent)
+                                        .foregroundColor(onAcentContainer)
                                     Text("\(publicacion.body)")
-                                        .foregroundColor(onAccent)
+                                        .foregroundColor(onAcentContainer)
                                 }
+                                .padding(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
+                                
                             }
-                            .padding(.init(top: 10, leading: 20, bottom: 10, trailing: 20))
+                            .background(Color(accentContainer))
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     }.simultaneousGesture(TapGesture().onEnded({
                         controlador.seleccionar_publicacion(publicacion)

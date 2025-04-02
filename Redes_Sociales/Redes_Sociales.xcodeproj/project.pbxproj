@@ -19,6 +19,11 @@
 		FB8BDB502D91BC3F00971BB0 /* controlador_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB4F2D91BC3F00971BB0 /* controlador_publicaciones.swift */; };
 		FB8BDB542D91BE1700971BB0 /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB532D91BE1700971BB0 /* publicaciones_general.swift */; };
 		FBC4C7D92D9AEC8000AED46E /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC4C7D82D9AEC8000AED46E /* menu_aplicacion.swift */; };
+		FBDBC1AD2D9D941700DFEADD /* personaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1AC2D9D941700DFEADD /* personaje.swift */; };
+		FBDBC1AF2D9D966800DFEADD /* planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1AE2D9D966800DFEADD /* planeta.swift */; };
+		FBDBC1B12D9D973100DFEADD /* transformaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1B02D9D973100DFEADD /* transformaciones.swift */; };
+		FBDBC1B32D9D98B300DFEADD /* dragon_ball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1B22D9D98B300DFEADD /* dragon_ball_api.swift */; };
+		FBDBC1B62D9D9A7B00DFEADD /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1B52D9D9A7B00DFEADD /* pagina_resultados.swift */; };
 		FBF438122D945C5100F88910 /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF438112D945C5100F88910 /* controlador_app.swift */; };
 		FBF438142D945E8700F88910 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF438132D945E8700F88910 /* publicacion.swift */; };
 		FBF438162D94633400F88910 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF438152D94633400F88910 /* comentario.swift */; };
@@ -38,6 +43,11 @@
 		FB8BDB4F2D91BC3F00971BB0 /* controlador_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_publicaciones.swift; sourceTree = "<group>"; };
 		FB8BDB532D91BE1700971BB0 /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
 		FBC4C7D82D9AEC8000AED46E /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
+		FBDBC1AC2D9D941700DFEADD /* personaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaje.swift; sourceTree = "<group>"; };
+		FBDBC1AE2D9D966800DFEADD /* planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeta.swift; sourceTree = "<group>"; };
+		FBDBC1B02D9D973100DFEADD /* transformaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformaciones.swift; sourceTree = "<group>"; };
+		FBDBC1B22D9D98B300DFEADD /* dragon_ball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragon_ball_api.swift; sourceTree = "<group>"; };
+		FBDBC1B52D9D9A7B00DFEADD /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 		FBF438112D945C5100F88910 /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBF438132D945E8700F88910 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
 		FBF438152D94633400F88910 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 		FB8BDB462D91B18B00971BB0 /* modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FBDBC1AB2D9D93F800DFEADD /* dragon_ball */,
 				FB8BDB492D91B26700971BB0 /* Publicacion.swift */,
 				FBF438152D94633400F88910 /* comentario.swift */,
 				FB3030172D9700F300235638 /* perfil.swift */,
@@ -125,6 +136,7 @@
 			children = (
 				FB8BDB4B2D91B49900971BB0 /* placeholder_api.swift */,
 				FB8BDB4D2D91B4AB00971BB0 /* errores.swift */,
+				FBDBC1B22D9D98B300DFEADD /* dragon_ball_api.swift */,
 			);
 			path = servicios_api;
 			sourceTree = "<group>";
@@ -154,6 +166,25 @@
 				FBC4C7D82D9AEC8000AED46E /* menu_aplicacion.swift */,
 			);
 			path = menu_inicial;
+			sourceTree = "<group>";
+		};
+		FBDBC1AB2D9D93F800DFEADD /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FBDBC1B42D9D9A6800DFEADD /* soporte */,
+				FBDBC1AC2D9D941700DFEADD /* personaje.swift */,
+				FBDBC1AE2D9D966800DFEADD /* planeta.swift */,
+				FBDBC1B02D9D973100DFEADD /* transformaciones.swift */,
+			);
+			path = dragon_ball;
+			sourceTree = "<group>";
+		};
+		FBDBC1B42D9D9A6800DFEADD /* soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FBDBC1B52D9D9A7B00DFEADD /* pagina_resultados.swift */,
+			);
+			path = soporte;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,14 +262,19 @@
 				FB8BDB4C2D91B49900971BB0 /* placeholder_api.swift in Sources */,
 				FB30301B2D97045200235638 /* perfil_vista_basica.swift in Sources */,
 				FB8BDB4A2D91B26700971BB0 /* Publicacion.swift in Sources */,
+				FBDBC1AD2D9D941700DFEADD /* personaje.swift in Sources */,
 				FB3030182D9700F300235638 /* perfil.swift in Sources */,
+				FBDBC1B62D9D9A7B00DFEADD /* pagina_resultados.swift in Sources */,
 				FB8BDB1F2D91B08200971BB0 /* ContentView.swift in Sources */,
 				FBF438162D94633400F88910 /* comentario.swift in Sources */,
 				FBF438142D945E8700F88910 /* publicacion.swift in Sources */,
 				FB8BDB502D91BC3F00971BB0 /* controlador_publicaciones.swift in Sources */,
 				FB8BDB1D2D91B08200971BB0 /* Redes_SocialesApp.swift in Sources */,
+				FBDBC1AF2D9D966800DFEADD /* planeta.swift in Sources */,
+				FBDBC1B32D9D98B300DFEADD /* dragon_ball_api.swift in Sources */,
 				FB8BDB4E2D91B4AB00971BB0 /* errores.swift in Sources */,
 				FBF438122D945C5100F88910 /* controlador_app.swift in Sources */,
+				FBDBC1B12D9D973100DFEADD /* transformaciones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

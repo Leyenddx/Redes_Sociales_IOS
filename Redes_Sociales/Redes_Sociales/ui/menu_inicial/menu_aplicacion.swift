@@ -15,8 +15,10 @@ struct MenuNavegacion: View {
             PublicacionesGeneral()
                 .tabItem {Label( "Publicaciones", systemImage: "signpost.and.arrowtriangle.up.fill" )}
                 .badge(controlador.publicaciones.count)
+            
             Text("Hela desde pantalla 2")
-                .tabItem { Label( "Pantalla 2", systemImage: "square.and.arrow.up.fill" )}
+                .tabItem { Label( "Dragon Ball DB", systemImage: "square.and.arrow.up.fill" )}
+            
             Text("Hela desde pantalla 3")
                 .tabItem { Label( "Perfil", systemImage: "person.fill" )}
         }
