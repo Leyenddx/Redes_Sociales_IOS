@@ -16,8 +16,8 @@ struct MenuNavegacion: View {
                 .tabItem {Label( "Publicaciones", systemImage: "signpost.and.arrowtriangle.up.fill" )}
                 .badge(controlador.publicaciones.count)
             
-            Text("Hela desde pantalla 2")
-                .tabItem { Label( "Dragon Ball DB", systemImage: "square.and.arrow.up.fill" )}
+            PantallaPersonajes()
+                .tabItem { Label( "Dragon Ball DB", systemImage: "star.fill" )}
             
             Text("Hela desde pantalla 3")
                 .tabItem { Label( "Perfil", systemImage: "person.fill" )}

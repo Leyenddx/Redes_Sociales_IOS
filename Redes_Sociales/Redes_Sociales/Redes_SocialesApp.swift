@@ -14,7 +14,7 @@ struct Redes_SocialesApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PublicacionesGeneral()
+            MenuNavegacion()
                 .environment(controlador)
         }
     }

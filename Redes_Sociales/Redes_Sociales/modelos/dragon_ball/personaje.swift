@@ -8,18 +8,20 @@
 struct MonoChino: Identifiable, Codable{
     
       let id: Int
+   
       let name: String
       let ki: String
       let maxKi: String
       let race: String
       let gender: String
       let description: String
+     
       let image: String
-      let ffiliation: String
+      let affiliation: String
     
-      let originPlanet: Planeta
+      let originPlanet: Planeta?
     
-      let transformations: Array <Transformaciones>
+      let transformations: Array <Transformaciones>?
     
 }
 
