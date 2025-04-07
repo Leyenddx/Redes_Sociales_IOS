@@ -19,29 +19,30 @@ struct PantallaPersonajes: View {
     let backgroundImage = Image("FondoDragon")
     
     var body: some View {
-        if(controlador.pagina_resultados != nil){
-            ScrollView{
-                LazyVStack{
-                    ForEach(controlador.pagina_resultados!.items){ personaje in
-                        Text("\(personaje.name)")
-                            .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
-                        
-                        AsyncImage(url: URL(string: personaje.image), scale: 4){image in
-                            image.image?.resizable().frame(width: 170, height: 340)
+        NavigationStack{
+            if(controlador.pagina_resultados != nil){
+                ScrollView{
+                    LazyVStack{
+                        ForEach(controlador.pagina_resultados!.items){ personaje in
+                            NavigationLink{
+                                PersonajeVista()
+                            } label : {
+                                VStack{
+                                    Text("\(personaje.name)")
+                                        .foregroundColor(Color(onAcentContainer))
+                                        .font(.title)
+                                    AsyncImage(url: URL(string: "\(personaje.image)"), scale: 4)
+                                }
+                            }.simultaneousGesture(TapGesture().onEnded({
+                                controlador.seleccionar_mono_chino(personaje)
+                            }))
                         }
-                        .padding(.init(top: 20, leading: 5, bottom: 20, trailing: 5))
-                        
-                        Text("Descripcion de \(personaje.name) - \(personaje.description)")
-                            .padding(.init(top: 20, leading: 15, bottom: 20, trailing: 15))
-                            .foregroundColor(onAccent)
-                            .background(acent)
-                        Divider()
+                        .frame(width: 300)
+                        .background(Color.orange)
+                        .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
                     }
-                    .frame(width: 300)
-                    .background(Color.orange)
-                    .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
-                }
-            }.background(backgroundImage)
+                }.background(backgroundImage)
+            }
         }
     }
 }

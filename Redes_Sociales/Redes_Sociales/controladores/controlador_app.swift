@@ -14,6 +14,7 @@ public class ControladorAplicacion{
     var comentarios: Array<Comentario> = []
     
     var publicacion_seleccionada: Publicacion? = nil
+    var personaje_seleccionado: MonoChino? = nil
     var perfil_a_mostrar: Perfil? = nil
     
     //Seccion dragon ball
@@ -22,7 +23,6 @@ public class ControladorAplicacion{
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
-            
             await self.descargar_monos_chinos()
             
         }
@@ -60,6 +60,14 @@ public class ControladorAplicacion{
         
         Task.detached(operation: {
             await self.descargar_comentarios()
+        })
+    }
+    
+    func seleccionar_mono_chino(_ mono:MonoChino) -> Void {
+        personaje_seleccionado = mono
+        
+        Task.detached(operation: {
+            await self.descargar_monos_chinos()
         })
     }
     
