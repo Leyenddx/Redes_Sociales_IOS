@@ -11,7 +11,13 @@ class DragonBallAPI: Codable{
     let url_base = "https://dragonball-api.com/api"
     
     func descargar_pagina_personajes() async -> PaginaResultado? {
-        let ubicacion_recurso = "/characters"
+        let ubicacion_recurso = "/characters?limit=58"
+        
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_personaje(id: Int) async -> MonoChino? {
+        let ubicacion_recurso = "/characters/\(id)"
         
         return await descargar(recurso: ubicacion_recurso)
     }

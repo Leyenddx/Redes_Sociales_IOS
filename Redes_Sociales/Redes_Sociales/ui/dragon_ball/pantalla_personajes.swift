@@ -33,15 +33,19 @@ struct PantallaPersonajes: View {
                                         .font(.title)
                                     AsyncImage(url: URL(string: "\(personaje.image)"), scale: 4)
                                 }
-                            }.simultaneousGesture(TapGesture().onEnded({
+                            }
+                            .simultaneousGesture(TapGesture().onEnded({
                                 controlador.seleccionar_mono_chino(personaje)
+                                controlador.decargar_informacion_personaje(id: personaje.id)
                             }))
                         }
                         .frame(width: 300)
                         .background(Color.orange)
                         .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        .clipShape(RoundedRectangle(cornerRadius: 50))
                     }
-                }.background(backgroundImage)
+                }
+                .background(backgroundImage)
             }
         }
     }

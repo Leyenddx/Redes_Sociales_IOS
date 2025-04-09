@@ -17,7 +17,6 @@
 		FB8BDB4A2D91B26700971BB0 /* Publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB492D91B26700971BB0 /* Publicacion.swift */; };
 		FB8BDB4C2D91B49900971BB0 /* placeholder_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB4B2D91B49900971BB0 /* placeholder_api.swift */; };
 		FB8BDB4E2D91B4AB00971BB0 /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB4D2D91B4AB00971BB0 /* errores.swift */; };
-		FB8BDB502D91BC3F00971BB0 /* controlador_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB4F2D91BC3F00971BB0 /* controlador_publicaciones.swift */; };
 		FB8BDB542D91BE1700971BB0 /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BDB532D91BE1700971BB0 /* publicaciones_general.swift */; };
 		FBC4C7D92D9AEC8000AED46E /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC4C7D82D9AEC8000AED46E /* menu_aplicacion.swift */; };
 		FBDBC1AD2D9D941700DFEADD /* personaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBC1AC2D9D941700DFEADD /* personaje.swift */; };
@@ -43,7 +42,6 @@
 		FB8BDB492D91B26700971BB0 /* Publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publicacion.swift; sourceTree = "<group>"; };
 		FB8BDB4B2D91B49900971BB0 /* placeholder_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder_api.swift; sourceTree = "<group>"; };
 		FB8BDB4D2D91B4AB00971BB0 /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
-		FB8BDB4F2D91BC3F00971BB0 /* controlador_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_publicaciones.swift; sourceTree = "<group>"; };
 		FB8BDB532D91BE1700971BB0 /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
 		FBC4C7D82D9AEC8000AED46E /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 		FBDBC1AC2D9D941700DFEADD /* personaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personaje.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 		FB8BDB472D91B19300971BB0 /* controladores */ = {
 			isa = PBXGroup;
 			children = (
-				FB8BDB4F2D91BC3F00971BB0 /* controlador_publicaciones.swift */,
 				FBF438112D945C5100F88910 /* controlador_app.swift */,
 			);
 			path = controladores;
@@ -284,7 +281,6 @@
 				FB8BDB1F2D91B08200971BB0 /* ContentView.swift in Sources */,
 				FBF438162D94633400F88910 /* comentario.swift in Sources */,
 				FBF438142D945E8700F88910 /* publicacion.swift in Sources */,
-				FB8BDB502D91BC3F00971BB0 /* controlador_publicaciones.swift in Sources */,
 				FB8BDB1D2D91B08200971BB0 /* Redes_SocialesApp.swift in Sources */,
 				FBDBC1AF2D9D966800DFEADD /* planeta.swift in Sources */,
 				FBDBC1B32D9D98B300DFEADD /* dragon_ball_api.swift in Sources */,

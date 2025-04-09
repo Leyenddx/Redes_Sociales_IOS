@@ -27,18 +27,35 @@ struct PersonajeVista: View {
             ScrollView{
                 VStack{
                     Text("\(controlador.personaje_seleccionado?.name ?? "Nombre por dfecto")")
+                        .font(.title)
                     Text("GENERO: \(controlador.personaje_seleccionado?.gender ?? "Genero por dfecto")")
                         .foregroundColor(onAccent)
+                        .font(.title3)
                     Text("AFILIACION: \(controlador.personaje_seleccionado?.affiliation ?? "Afiliacion por dfecto")")
                         .foregroundColor(onAccent)
+                        .font(.title3)
                     Text("RAZA: \(controlador.personaje_seleccionado?.race ?? "raza por dfecto")")
                         .foregroundColor(onAccent)
+                        .font(.title3)
                     Text("KI: \(controlador.personaje_seleccionado?.ki ?? "Ki por dfecto")")
                         .foregroundColor(onAccent)
+                        .font(.title3)
                     Text("MAX KI: \(controlador.personaje_seleccionado?.maxKi ?? "maxKi por dfecto")")
                         .foregroundColor(onAccent)
-                    Text("DESCRIPCION: \(controlador.personaje_seleccionado?.description ?? "Descripcion por dfecto")")
+                        .font(.title3)
+                    Text("PlANETA DE ORIGEN: \(controlador.personaje?.originPlanet?.name ?? "Planeta dfecto")")
                         .foregroundColor(onAccent)
+                        .font(.title3)
+                    Text("NUMERO DE TRANSFORMACIONES: \(controlador.personaje?.transformations?.count ?? 0)")
+                        .foregroundColor(onAccent)
+                        .font(.title3)
+                    VStack{
+                        Text("DESCRIPCION: \(controlador.personaje_seleccionado?.description ?? "Descripcion por dfecto")")
+                            .foregroundColor(onAcentContainer)
+                            .padding()
+                    }
+                    .background(Color(.orange))
+                    .padding()
                 }
                 .padding()
             }
