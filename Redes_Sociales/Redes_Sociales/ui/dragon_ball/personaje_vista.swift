@@ -19,8 +19,6 @@ struct PersonajeVista: View {
     let backgroundImage = Image("FondoDragon")
     
     var body: some View {
-        
-       
         AsyncImage(url: URL(string: "\(controlador.personaje_seleccionado?.image ?? "Imagen por defecto")"), scale: 4){image in
         image.image?.resizable().frame(width: 170, height: 340)
     
@@ -66,7 +64,6 @@ struct PersonajeVista: View {
             }
             .background(acent)
         }
-        
         .background(backgroundImage)
     }
 }
