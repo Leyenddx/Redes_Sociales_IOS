@@ -26,6 +26,11 @@ struct PaginaResultado:Codable{
       let items: [MonoChino]
       let meta: Meta
       let links: Enlaces
-    
-    
+}
+
+struct PaginaResultadoPlaneta:Codable{
+      //var  id = Self.meta.currentPage
+      let items: [Planeta]
+      let meta: Meta
+      let links: Enlaces
 }

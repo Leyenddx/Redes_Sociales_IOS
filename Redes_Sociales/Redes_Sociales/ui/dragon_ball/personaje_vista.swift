@@ -43,9 +43,14 @@ struct PersonajeVista: View {
                     Text("MAX KI: \(controlador.personaje_seleccionado?.maxKi ?? "maxKi por dfecto")")
                         .foregroundColor(onAccent)
                         .font(.title3)
-                    Text("PlANETA DE ORIGEN: \(controlador.personaje?.originPlanet?.name ?? "Planeta dfecto")")
-                        .foregroundColor(onAccent)
-                        .font(.title3)
+                    NavigationLink{
+                        PlanetaVista()
+                    } label : {
+                            Text("PlANETA DE ORIGEN: \(controlador.personaje?.originPlanet?.name ?? "Planeta defecto")")
+                            .foregroundColor(onAccent)
+                            .font(.title3)
+                    }
+                    
                     Text("NUMERO DE TRANSFORMACIONES: \(controlador.personaje?.transformations?.count ?? 0)")
                         .foregroundColor(onAccent)
                         .font(.title3)
@@ -64,8 +69,6 @@ struct PersonajeVista: View {
         
         .background(backgroundImage)
     }
-    
-        
 }
 
 #Preview {
