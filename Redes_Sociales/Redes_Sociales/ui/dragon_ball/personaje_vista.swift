@@ -45,13 +45,18 @@ struct PersonajeVista: View {
                         PlanetaVista()
                     } label : {
                             Text("PlANETA DE ORIGEN: \(controlador.personaje?.originPlanet?.name ?? "Planeta defecto")")
-                            .foregroundColor(onAccent)
+                            .foregroundColor(Color.blue)
                             .font(.title3)
                     }
                     
-                    Text("NUMERO DE TRANSFORMACIONES: \(controlador.personaje?.transformations?.count ?? 0)")
-                        .foregroundColor(onAccent)
-                        .font(.title3)
+                    NavigationLink{
+                        TransformacionesPersonaje()
+                    } label : {
+                            Text("NUMERO DE TRANSFORMACIONES: \(controlador.personaje?.transformations?.count ?? 0)")
+                            .foregroundColor(Color.blue)
+                            .font(.title3)
+                    }
+                    
                     VStack{
                         Text("DESCRIPCION: \(controlador.personaje_seleccionado?.description ?? "Descripcion por dfecto")")
                             .foregroundColor(onAcentContainer)

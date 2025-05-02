@@ -32,7 +32,7 @@ struct PlanetaVista: View {
                     .foregroundColor(onAccent)
                     .font(.title3)
                 AsyncImage(url: URL(string: "\(controlador.personaje?.originPlanet?.image ?? "Imagen por defecto")"), scale: 4){image in
-                    image.image?.resizable().frame(width: 200, height: 160)
+                    image.image?.resizable().frame(width: 250, height: 160)
                 }
             }
             .padding()

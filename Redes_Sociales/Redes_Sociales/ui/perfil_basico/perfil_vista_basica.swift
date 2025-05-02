@@ -23,6 +23,7 @@ struct PerfilBasicoVista: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
+        
         VStack{
             PhotosPicker(selection: $foto_seleccionada){
                 Image(uiImage: foto_a_mostrar ?? UIImage(resource: .avatar2))
@@ -36,21 +37,22 @@ struct PerfilBasicoVista: View {
                     if let foto_seleccionada, let datos = try? await foto_seleccionada.loadTransferable(type: Data.self){
                         if let image = UIImage(data: datos){
                             foto_a_mostrar = image
+                            controlador.imagen_de_perfil = image
                         }
                     }
                 }
             }
             VStack{
-                Text("Usuario: \(controlador.perfil_a_mostrar?.username ?? "Puede que no")")
-                Text("Nombre: \(controlador.perfil_a_mostrar?.name ?? "sea bonito")")
-                Text("Correo: \(controlador.perfil_a_mostrar?.email ?? "ver esto")")
+                Text("Usuario: \(controlador.perfil_a_mostrar?.username ?? "Leyenddx")")
+                Text("Nombre: \(controlador.perfil_a_mostrar?.name ?? "Aron Navarro")")
+                Text("Correo: \(controlador.perfil_a_mostrar?.email ?? "aarok_ny224@hotmail.com")")
                     .onDisappear(){
                         print("Adios mundo cruel, este mensaje se ve cuando destruimos la vista")
                     }
                   }
                 }
-    
-    .background(acent)
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(acent)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB09A7BF2DC5217800B9CAC7 /* transformaciones_personaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A7BE2DC5217800B9CAC7 /* transformaciones_personaje.swift */; };
 		FB3030182D9700F300235638 /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3030172D9700F300235638 /* perfil.swift */; };
 		FB30301B2D97045200235638 /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30301A2D97045200235638 /* perfil_vista_basica.swift */; };
 		FB57F7EE2DA033FF001F4BD4 /* pantalla_personajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB57F7ED2DA033FF001F4BD4 /* pantalla_personajes.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB09A7BE2DC5217800B9CAC7 /* transformaciones_personaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformaciones_personaje.swift; sourceTree = "<group>"; };
 		FB3030172D9700F300235638 /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FB30301A2D97045200235638 /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
 		FB57F7ED2DA033FF001F4BD4 /* pantalla_personajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_personajes.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				FB57F7ED2DA033FF001F4BD4 /* pantalla_personajes.swift */,
 				FBE623A12DA42690000456A0 /* personaje_vista.swift */,
 				FB8E1ECF2DBFDC18005D4660 /* planeta_vista.swift */,
+				FB09A7BE2DC5217800B9CAC7 /* transformaciones_personaje.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				FB8BDB4E2D91B4AB00971BB0 /* errores.swift in Sources */,
 				FB8E1ED02DBFDC18005D4660 /* planeta_vista.swift in Sources */,
 				FBF438122D945C5100F88910 /* controlador_app.swift in Sources */,
+				FB09A7BF2DC5217800B9CAC7 /* transformaciones_personaje.swift in Sources */,
 				FBDBC1B12D9D973100DFEADD /* transformaciones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

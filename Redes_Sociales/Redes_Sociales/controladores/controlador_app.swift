@@ -17,8 +17,10 @@ public class ControladorAplicacion{
     var personaje_seleccionado: MonoChino? = nil
     var planeta_seleccionado: Planeta? = nil
     var planeta: Planeta?
+    var Transformacion: Transformaciones? = nil
     var personaje: MonoChino? = nil
     var perfil_a_mostrar: Perfil? = nil
+    var imagen_de_perfil: UIImage? = nil
     
     //Seccion dragon ball
     var pagina_resultados: PaginaResultado? = nil
@@ -27,7 +29,6 @@ public class ControladorAplicacion{
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
             await self.descargar_monos_chinos()
-            
         }
     }
     
@@ -38,6 +39,12 @@ public class ControladorAplicacion{
     }
     func descargar_planetas() async {
         guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_planetas() else {return}
+        
+        self.pagina_resultados = pagina_descargada
+    }
+    
+    func descargar_tansformaciones(id: Int) async {
+        guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_transformaciones(id: id) else {return}
         
         self.pagina_resultados = pagina_descargada
     }

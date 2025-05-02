@@ -19,7 +19,7 @@ struct MenuNavegacion: View {
             PantallaPersonajes()
                 .tabItem { Label( "Dragon Ball DB", systemImage: "star.fill" )}
             
-            Text("Hela desde pantalla 3")
+            PerfilBasicoVista()
                 .tabItem { Label( "Perfil", systemImage: "person.fill" )}
         }
     }
